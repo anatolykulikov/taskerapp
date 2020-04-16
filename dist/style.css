@@ -250,7 +250,8 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 30px;
     width: 100%;
-    padding: 30px; }
+    padding: 30px;
+    overflow: hidden; }
 
 .taskslist {
   display: block;

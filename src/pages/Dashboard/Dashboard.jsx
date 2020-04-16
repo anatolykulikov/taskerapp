@@ -45,9 +45,9 @@ class DashboardComponent extends Component {
                     <h1>TaskApp</h1>
                 </header>
                 <section className="dashboard__body">
-                    <TasksList name="Planned" loading={loading} tasks={plannedTasks} />
-                    <TasksList name="In Work" loading={loading} tasks={workingTasks} />
-                    <TasksList name="Completed" loading={loading} tasks={completeTasks} />
+                    <TasksList name="Запланированы" loading={loading} tasks={plannedTasks} />
+                    <TasksList name="В работе" loading={loading} tasks={workingTasks} />
+                    <TasksList name="Завершены" loading={loading} tasks={completeTasks} />
                 </section>
             </div>
         )

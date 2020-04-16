@@ -8,5 +8,5 @@ import { rootReducer } from 'reducers';
 // Создаем store приложения
 export const store = createStore(
     rootReducer,
-    applyMiddleware(thunk, logger)
+    applyMiddleware(thunk)
 );

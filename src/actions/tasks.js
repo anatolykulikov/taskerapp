@@ -39,20 +39,70 @@ function findTask(id, arr) {
 }
 
 export const handleTasks = (id, actionTask) => (dispatch, getState) => {
+    // Вытаскиваем текущее состояние стора
     const storeState = getState();
-    let StoreData = storeState.tasks.data;
-    const storeIdTask = findTask(id, StoreData);
+    const prevState = storeState.tasks.data;
 
-    if(storeIdTask) {
-        switch(actionTask) {
-            case 'delete' : {
-                console.log(`Delete element ${storeIdTask}`)
-                StoreData.splice(storeIdTask, 1);
-            }
+    // Обрабатываем действие
+    switch(actionTask) {
+
+        // Переместить в план
+        case 'planned' : {
+            // Вырезаем из стора задачу
+            let nextState = prevState.filter((task) => {
+                if(task.id == id) {
+                    task.status = 'planned'
+                }
+
+                return task;
+            })
+            // Обновляем состояние
+            return dispatch(editTask(nextState));
         }
-    } else {
-        console.log(`Element ${storeIdTask} not in store`)
+
+        // Переместить в работу
+        case 'work' : {
+            // Вырезаем из стора задачу
+            let nextState = prevState.filter((task) => {
+                if(task.id == id) {
+                    task.status = 'work'
+                }
+
+                return task;
+            })
+            // Обновляем состояние
+            return dispatch(editTask(nextState));
+        }
+
+        // Переместить в завершенные
+        case 'complete' : {
+            // Вырезаем из стора задачу
+            let nextState = prevState.filter((task) => {
+                if(task.id == id) {
+                    task.status = 'complete'
+                }
+
+                return task;
+            })
+            // Обновляем состояние
+            return dispatch(editTask(nextState));
+        }
+        
+        // Удаляем задачу
+        case 'delete' : {
+            // Вырезаем из стора задачу
+            let nextState = prevState.filter((task) => {
+                if(task.id !== id) {
+                    return task;
+                }
+            })
+            // Обновляем состояние
+            return dispatch(editTask(nextState));
+        }
+
+        // Ничего не передано
+        default : {
+            return dispatch(editTask(prevState));
+        }
     }
-    
-    return dispatch(editTask(StoreData));
 }
