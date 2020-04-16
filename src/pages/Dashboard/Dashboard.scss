@@ -1,0 +1,41 @@
+// Размеры макета
+$margin: 15px;
+
+.dashboard {
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: $margin;
+        color: #FFFFFF;
+        background: #0C75BB;
+        box-shadow: #075386 0 0 10px;
+
+        h1 {
+            font-family: "Raleway";
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 700;
+            cursor: default;
+
+            &::selection {
+                background: transparent;
+            }
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 30px;
+        width: 100%;
+        padding: $margin*2;
+    }
+}

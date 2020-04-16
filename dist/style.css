@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif; }
+
+body {
+  background-color: #f7f7f7; }
+
+.list {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #ffffff; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.first_section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 82px 0;
+  background: url(/taskapp/wp-content/themes/taskerapp/img/background.jpg) no-repeat top right, #ffffff;
+  background-size: contain;
+  overflow: hidden; }
+  .first_section .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch; }
+  .first_section-title {
+    position: relative;
+    z-index: 1;
+    display: block; }
+  .first_section-image {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    display: block;
+    width: 520px; }
+    .first_section-image img {
+      display: block;
+      width: 100%;
+      height: auto; }
+  .first_section h2 {
+    display: block;
+    margin: 0 0 30px;
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 700;
+    color: #4374b7; }
+  .first_section h1 {
+    display: block;
+    margin: 0 0 30px;
+    font-family: "Raleway", sans-serif;
+    font-size: 72px;
+    line-height: 120%;
+    font-weight: 700;
+    color: #313131; }
+  .first_section p {
+    display: block;
+    margin: 0 0 45px;
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 400;
+    color: #414141; }
+  .first_section nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+    .first_section nav a {
+      display: block;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-family: "Raleway", sans-serif;
+      font-size: 24px;
+      line-height: 120%;
+      font-weight: 400;
+      text-decoration: none; }
+      .first_section nav a:nth-of-type(1) {
+        margin-right: 15px; }
+    .first_section nav .signin {
+      color: #ffffff;
+      background-color: #4374b7;
+      -webkit-transition: background linear .2s;
+      -o-transition: background linear .2s;
+      transition: background linear .2s; }
+      .first_section nav .signin:hover {
+        background-color: #2d5b9a; }
+    .first_section nav .signout {
+      border: #4374b7 solid 1px;
+      color: #4374b7;
+      -webkit-transition: all linear .2s;
+      -o-transition: all linear .2s;
+      transition: all linear .2s; }
+      .first_section nav .signout:hover {
+        color: #ffffff;
+        border-color: #2d5b9a;
+        background-color: #2d5b9a; }
+
+.autorization {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: url(/taskapp/wp-content/themes/taskerapp/img/background.jpg) no-repeat;
+  background-size: cover; }
+  .autorization__wrapper {
+    display: block;
+    width: 400px;
+    margin: auto; }
+  .autorization h1 {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Raleway";
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 800; }
+    .autorization h1 a {
+      text-decoration: none;
+      color: inherit; }
+  .autorization-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: white;
+    -webkit-box-shadow: 0 4px 16px #e0e0e0;
+            box-shadow: 0 4px 16px #e0e0e0; }
+    .autorization-field h2 {
+      margin: 0 auto;
+      padding-bottom: 30px;
+      font-family: "Raleway";
+      font-size: 30px;
+      line-height: 35px;
+      font-weight: 700; }
+    .autorization-field label {
+      display: block;
+      width: 100%;
+      margin: 0 auto 30px; }
+      .autorization-field label span {
+        display: block;
+        width: 100%;
+        font-family: "Raleway";
+        font-size: 18px; }
+      .autorization-field label input {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        border: #e0e0e0 solid 1px;
+        font-family: "Raleway";
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 400;
+        -webkit-box-shadow: #ffffff inset 0 0 0 100px;
+                box-shadow: #ffffff inset 0 0 0 100px; }
+  .autorization-button {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: #0C75BB solid 1px;
+    border-radius: 5px;
+    font-family: "Raleway";
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: #0C75BB; }
+  .autorization .subbutton {
+    display: inline-block;
+    margin: 0 auto;
+    width: auto;
+    padding: 20px 20px 0;
+    text-decoration: none;
+    font-family: "Raleway";
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 500;
+    color: #0C75BB; }
+
+
+.dashboard {
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .dashboard__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    color: #FFFFFF;
+    background: #0C75BB;
+    -webkit-box-shadow: #075386 0 0 10px;
+            box-shadow: #075386 0 0 10px; }
+    .dashboard__header h1 {
+      font-family: "Raleway";
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+      cursor: default; }
+      .dashboard__header h1::-moz-selection {
+        background: transparent; }
+      .dashboard__header h1::selection {
+        background: transparent; }
+  .dashboard__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    width: 100%;
+    padding: 30px; }
+
+.taskslist {
+  display: block;
+  height: 100%;
+  overflow: auto; }
+  .taskslist__header {
+    margin: 0 0 9px 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #313131; }
+
+.task {
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 16px 0 #e7e7e7;
+          box-shadow: 0 0 16px 0 #e7e7e7;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 0 15px; }
+  .task-header {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #313131; }
+  .task-controls {
+    margin: 17px 0 0 0; }
+    .task-controls .task-control-start {
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+      color: #4374b7;
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      margin: 0 14px 0 0; }
+    .task-controls .task-control-start,
+    .task-controls .task-control-start:active,
+    .task-controls .task-control-start:focus {
+      outline: none; }
+    .task-controls .task-control-del {
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+      color: #d13814;
+      background-color: transparent;
+      border: 0;
+      padding: 0; }
+    .task-controls .task-control-del,
+    .task-controls .task-control-del:active,
+    .task-controls .task-control-del:focus {
+      outline: none; }
+  .task-bookmark {
+    position: absolute;
+    top: -4px;
+    right: 0; }
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  width: 80px;
+  height: 80px; }
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #0C75BB;
+  -webkit-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite; }
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s; }
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s; }
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0; }
+
+@-webkit-keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px; }
+  50%, 100% {
+    top: 24px;
+    height: 32px; } }
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px; }
+  50%, 100% {
+    top: 24px;
+    height: 32px; } }
+
