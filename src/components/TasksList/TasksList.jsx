@@ -8,7 +8,7 @@ import { Loading } from 'components/Loading';
 export function TasksList(props) {
     const loading = props.loading;
     const tasksItems = props.tasks.map((task) => {
-        return <Task key={task.id} id={task.id} title={task.title} description={task.description} badgeColor={task.badgeColor} />;
+        return <Task key={task.id} {...task} />;
     })
 
     return(

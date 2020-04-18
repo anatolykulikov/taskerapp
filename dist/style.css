@@ -272,47 +272,43 @@ body {
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 16px 0 #e7e7e7;
           box-shadow: 0 0 16px 0 #e7e7e7;
-  padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 0 15px; }
   .task-header {
     margin: 0;
-    padding: 0;
+    padding: 15px;
     font-family: "Raleway", sans-serif;
     font-size: 20px;
     line-height: 130%;
     font-weight: 700;
-    color: #313131; }
+    color: #313131;
+    cursor: default; }
   .task-controls {
-    margin: 17px 0 0 0; }
-    .task-controls .task-control-start {
-      font-family: "Raleway", sans-serif;
-      font-size: 14px;
-      line-height: 16px;
-      font-weight: 400;
-      color: #4374b7;
-      background-color: transparent;
+    padding: 15px; }
+    .task-controls .task-control {
+      display: inline-block;
       border: 0;
       padding: 0;
-      margin: 0 14px 0 0; }
-    .task-controls .task-control-start,
-    .task-controls .task-control-start:active,
-    .task-controls .task-control-start:focus {
-      outline: none; }
-    .task-controls .task-control-del {
       font-family: "Raleway", sans-serif;
       font-size: 14px;
       line-height: 16px;
       font-weight: 400;
-      color: #d13814;
       background-color: transparent;
-      border: 0;
-      padding: 0; }
-    .task-controls .task-control-del,
-    .task-controls .task-control-del:active,
-    .task-controls .task-control-del:focus {
-      outline: none; }
+      cursor: pointer;
+      -webkit-transition: color ease-in-out .2s;
+      -o-transition: color ease-in-out .2s;
+      transition: color ease-in-out .2s; }
+      .task-controls .task-control:not(:last-of-type) {
+        margin-right: 14px; }
+    .task-controls .control-run {
+      color: #1E88E5; }
+      .task-controls .control-run:hover {
+        color: #1565C0; }
+    .task-controls .control-del {
+      color: #e53935; }
+      .task-controls .control-del:hover {
+        color: #b71c1c; }
   .task-bookmark {
     position: absolute;
     top: -4px;

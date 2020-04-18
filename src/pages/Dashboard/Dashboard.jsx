@@ -10,10 +10,13 @@ import { load } from 'actions/tasks.js'
 import { TasksList } from 'components/TasksList';
 
 class DashboardComponent extends Component {
-    
     componentDidMount() {
         const { loadTasks } = this.props;
-        loadTasks();
+        const token = localStorage.getItem('_t');
+
+        if(token) {
+            loadTasks();
+        }
     }
     
     render() {
@@ -39,17 +42,22 @@ class DashboardComponent extends Component {
             }
         })
 
+        const token = localStorage.getItem('_t');
+
         return(
-            <div className="dashboard">
-                <header className="dashboard__header">
-                    <h1>TaskApp</h1>
-                </header>
-                <section className="dashboard__body">
-                    <TasksList name="Запланированы" loading={loading} tasks={plannedTasks} />
-                    <TasksList name="В работе" loading={loading} tasks={workingTasks} />
-                    <TasksList name="Завершены" loading={loading} tasks={completeTasks} />
-                </section>
-            </div>
+            <>
+                {!token && <Redirect to="/taskapp/auth" />}
+                <div className="dashboard">
+                    <header className="dashboard__header">
+                        <h1>TaskApp</h1>
+                    </header>
+                    <section className="dashboard__body">
+                        <TasksList name="Запланированы" loading={loading} tasks={plannedTasks} />
+                        <TasksList name="В работе" loading={loading} tasks={workingTasks} />
+                        <TasksList name="Завершены" loading={loading} tasks={completeTasks} />
+                    </section>
+                </div>
+            </>
         )
     }
 }
