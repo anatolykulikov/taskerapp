@@ -1,10 +1,11 @@
 import { handleActions } from 'redux-actions';
 
-import { loadStart, dataReceived, errorOccured, editTask } from 'actions/tasks.js';
+import { loadStart, dataReceived, errorOccured, editTask, vieweTask, addTask } from 'actions/tasks.js';
 
 const initialState = {
     loading: false,
     data: [],
+    selectedTask: -1,
     error: false
 }
 
@@ -30,6 +31,18 @@ export const reducer = handleActions({
         };
     },
     [editTask]: (state, action) => {
+        return {
+            ...state,
+            data: action.payload
+        }
+    },
+    [vieweTask]: (state, action) => {
+        return {
+            ...state,
+            selectedTask: action.payload
+        }
+    },
+    [addTask]: (state, action) => {
         return {
             ...state,
             data: action.payload

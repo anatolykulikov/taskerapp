@@ -14,17 +14,19 @@ import { Main } from 'pages/Main';
 import { Login } from 'pages/Login';
 import { Reg } from 'pages/Reg';
 import { Dashboard } from 'pages/Dashboard';
+import { AddTask } from 'pages/AddTask';
 
 ReactDom.render(
     <Provider store={store} >
         <BrowserRouter>
             <Switch>
-                <Route path="/taskapp/" component={Main} exact />
-                <Route path="/taskapp/auth" component={Login} exact />
-                <Route path="/taskapp/reg" component={Reg} exact />
-                <Route path="/taskapp/dashboard" component={Dashboard} exact />
+                <Route path="/app-task/" component={Main} exact />
+                <Route path="/app-task/auth/" component={Login} exact />
+                <Route path="/app-task/reg/" component={Reg} exact />
+                <Route path="/app-task/dashboard/" component={Dashboard} exact />
+                <Route path="/app-task/dashboard/add/" component={AddTask} exact />
             </Switch>
-            {localStorage.getItem('_t') ? <Redirect to="/taskapp/dashboard" /> : <></>}
+            {localStorage.getItem('_t') ? <Redirect to="/app-task/dashboard/" /> : <></>}
         </BrowserRouter>
     </Provider>,
     document.getElementById('root')

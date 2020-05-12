@@ -20,7 +20,7 @@ $background: #f9f9f9;
 
     &-header {
         margin: 0;
-        padding: 15px;
+        padding: $margin;
         font-family: "Raleway", sans-serif;
         font-size: 20px;
         line-height: 130%;
@@ -29,8 +29,18 @@ $background: #f9f9f9;
         cursor: default;
     }
 
+    &-body {
+        margin: 0;
+        padding: 0 $margin $margin;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        line-height: 130%;
+        font-weight: 400;
+        color: #313131;
+    }
+
     &-controls {
-        padding: 15px;
+        padding: $margin;
 
         .task-control {
             display: inline-block;

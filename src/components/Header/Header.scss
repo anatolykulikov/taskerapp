@@ -1,0 +1,23 @@
+$margin: 15px;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: $margin $margin*2;
+    color: #FFFFFF;
+    background: #0C75BB;
+    box-shadow: #075386 0 0 10px;
+
+    h1 {
+        font-family: "Raleway";
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+        cursor: default;
+
+        &::selection {
+            background: transparent;
+        }
+    }
+}

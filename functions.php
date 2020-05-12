@@ -170,7 +170,7 @@ function getdata($request) {
     $verifyToken = get_user_meta($id, 'token', true);
 
     if($verifyToken === $token) {       
-        $response = json_decode(get_user_meta($id, 'json', true));
+        $response = get_user_meta($id, 'json', true);
     } else {
         $response = array(
             "state" => 'error',
@@ -184,13 +184,14 @@ function getdata($request) {
 
 function saveData($request) {
     $data = $request['data'];
+    
     $authData = json_decode(base64_decode($request['token']));
     $id = $authData->id;
     $token = $authData->token;
     $verifyToken = get_user_meta($id, 'token', true);
 
     if($verifyToken === $token) {
-        update_user_meta($id, 'json', $data);
+        update_user_meta($id, 'json', json_encode($data));
         
         $response = array(
             "state" => 'successful'

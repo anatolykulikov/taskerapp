@@ -22,7 +22,7 @@ export class Login extends Component {
 
     buttonClickHandler = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:8888/taskapp/wp-json/api/auth/?login=${this.state.email}&password=${this.state.password}`)
+        fetch(`http://localhost:8888/app-task/wp-json/api/auth/?login=${this.state.email}&password=${this.state.password}`)
         .then((response) => {
                 return response.json();
         })
@@ -49,10 +49,10 @@ export class Login extends Component {
     render() {
         return (
             <>
-                {this.state.logged ? <Redirect to="/taskapp/dashboard" /> : <></>}
+                {this.state.logged ? <Redirect to="/app-task/dashboard" /> : <></>}
                 <div className="autorization">
                     <div className="autorization__wrapper">
-                        <h1><Link to="/taskapp">TaskUp</Link></h1>
+                        <h1><Link to="/app-task">TaskUp</Link></h1>
                         <form className="autorization-field">
                             <h2>Войти</h2>
                             <label>
@@ -63,7 +63,7 @@ export class Login extends Component {
                             </label>
                             {this.state.error ? <label><span>Неправильный логин / пароль</span></label> : <></>}
                             <button onClick={this.buttonClickHandler} value="Sign up" className="autorization-button">Войти</button>
-                            <Link to="/taskapp/reg" className="subbutton">Зарегистрироваться</Link>
+                            <Link to="/app-task/reg" className="subbutton">Зарегистрироваться</Link>
                         </form>
                     </div>
                 </div>

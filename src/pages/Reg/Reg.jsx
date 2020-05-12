@@ -20,7 +20,7 @@ export class Reg extends Component {
 
     buttonClickHandler = (e) => {
         e.preventDefault();
-        let pathToAPI = 'http://localhost:8888/taskapp/wp-json/api/registation/';
+        let pathToAPI = 'http://localhost:8888/app-task/wp-json/api/registation/';
 
         let data = {
             login: this.state.email,
@@ -62,10 +62,10 @@ export class Reg extends Component {
     render() {
         return (
             <>
-                {this.state.logged ? <Redirect to="/taskapp/dashboard" /> : <></>}
+                {this.state.logged ? <Redirect to="/app-task/dashboard" /> : <></>}
                 <div className="autorization">
                     <div className="autorization__wrapper">
-                        <h1><Link to="/taskapp">TaskUp</Link></h1>
+                        <h1><Link to="/app-task">TaskUp</Link></h1>
                         <form className="autorization-field">
                             <h2>Регистрация</h2>
                             <label>
@@ -76,7 +76,7 @@ export class Reg extends Component {
                             </label>
                             {this.state.error ? <label><span>{this.state.errorText}</span></label> : <></>}
                             <button onClick={this.buttonClickHandler} value="Sign up" className="autorization-button">Зарегистрироваться</button>
-                            <Link to="/taskapp/auth" className="subbutton">Войти</Link>
+                            <Link to="/app-task/auth" className="subbutton">Войти</Link>
                         </form>
                     </div>
                 </div>

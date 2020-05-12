@@ -32,7 +32,7 @@ body {
   width: 100%;
   height: 100vh;
   padding: 82px 0;
-  background: url(/taskapp/wp-content/themes/taskerapp/img/background.jpg) no-repeat top right, #ffffff;
+  background: url(/app-task/wp-content/themes/taskerapp/img/background.jpg) no-repeat top right, #ffffff;
   background-size: contain;
   overflow: hidden; }
   .first_section .wrapper {
@@ -127,7 +127,7 @@ body {
           flex-direction: column;
   width: 100%;
   height: 100vh;
-  background: url(/taskapp/wp-content/themes/taskerapp/img/background.jpg) no-repeat;
+  background: url(/app-task/wp-content/themes/taskerapp/img/background.jpg) no-repeat;
   background-size: cover; }
   .autorization__wrapper {
     display: block;
@@ -222,29 +222,6 @@ body {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
-  .dashboard__header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%;
-    padding: 15px;
-    color: #FFFFFF;
-    background: #0C75BB;
-    -webkit-box-shadow: #075386 0 0 10px;
-            box-shadow: #075386 0 0 10px; }
-    .dashboard__header h1 {
-      font-family: "Raleway";
-      font-size: 24px;
-      line-height: 28px;
-      font-weight: 700;
-      cursor: default; }
-      .dashboard__header h1::-moz-selection {
-        background: transparent; }
-      .dashboard__header h1::selection {
-        background: transparent; }
   .dashboard__body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -252,6 +229,30 @@ body {
     width: 100%;
     padding: 30px;
     overflow: hidden; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 15px 30px;
+  color: #FFFFFF;
+  background: #0C75BB;
+  -webkit-box-shadow: #075386 0 0 10px;
+          box-shadow: #075386 0 0 10px; }
+  .header h1 {
+    font-family: "Raleway";
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    cursor: default; }
+    .header h1::-moz-selection {
+      background: transparent; }
+    .header h1::selection {
+      background: transparent; }
 
 .taskslist {
   display: block;
@@ -284,6 +285,14 @@ body {
     font-weight: 700;
     color: #313131;
     cursor: default; }
+  .task-body {
+    margin: 0;
+    padding: 0 15px 15px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 400;
+    color: #313131; }
   .task-controls {
     padding: 15px; }
     .task-controls .task-control {
@@ -360,4 +369,116 @@ body {
   50%, 100% {
     top: 24px;
     height: 32px; } }
+
+.task__full {
+  display: block;
+  padding-top: 45px; }
+  .task__full .color_picker {
+    display: none;
+    visibility: hidden; }
+
+.task__add_button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px; }
+  .task__add_button a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    line-height: 130%;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #1E88E5;
+    -webkit-transition: background ease-in-out .2s;
+    -o-transition: background ease-in-out .2s;
+    transition: background ease-in-out .2s;
+    cursor: pointer; }
+    .task__add_button a span.icon {
+      display: block;
+      height: 100%;
+      padding: 10px 16px;
+      background-color: #1565C0; }
+    .task__add_button a span.text {
+      display: block;
+      height: 100%;
+      padding: 10px 16px; }
+    .task__add_button a:hover {
+      background-color: #1565C0; }
+
+.addtask__page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 60px 15px; }
+
+.addtask {
+  display: block;
+  width: 100%;
+  max-width: 512px;
+  padding: 30px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 16px 0 #e7e7e7;
+          box-shadow: 0 0 16px 0 #e7e7e7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .addtask h1 {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px; }
+  .addtask_point {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px; }
+    .addtask_point span {
+      display: inline-block;
+      margin-bottom: 3px;
+      font-family: "Raleway", sans-serif;
+      font-size: 16px;
+      line-height: 130%;
+      font-weight: 700; }
+    .addtask_point input[type="text"] {
+      display: block;
+      width: 100%;
+      padding: 6px;
+      border: #e0e0e0 solid 1px;
+      border-radius: 3px;
+      font-family: "Raleway", sans-serif;
+      font-size: 16px;
+      line-height: 130%;
+      font-weight: 500; }
+    .addtask_point input[type="color"] {
+      position: relative;
+      top: 3px;
+      display: inline-block;
+      width: 27px;
+      height: 27px;
+      margin-left: 5px;
+      border: none;
+      border-color: transparent;
+      outline: none; }
+    .addtask_point textarea {
+      display: block;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      padding: 6px;
+      border: #e0e0e0 solid 1px;
+      border-radius: 3px;
+      font-family: "Raleway", sans-serif;
+      font-size: 16px;
+      line-height: 130%;
+      font-weight: 500; }
 
